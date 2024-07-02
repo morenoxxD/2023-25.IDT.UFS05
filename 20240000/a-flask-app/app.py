@@ -98,6 +98,7 @@ def main():
 
         query = ("SELECT first_name, last_name FROM employees")
 
+
         
         cursor.execute(query)
 
@@ -107,7 +108,7 @@ def main():
         connection.close()
     except Error as e:
         risposta=f"The error '{e}' occurred"
-    return risposta
+    return risposta + "1"
 
 @appWeb.route("/prova")
 def prova():
