@@ -8,6 +8,8 @@ https://learn.microsoft.com/en-us/azure/app-service/provision-resource-terraform
 export TF_VAR_AZURE_RESOURCE_GROUP=learn-...
 export TF_VAR_AZURE_APP_SERVICE_REPO_URL='....'
 
+terraform import azurerm_resource_group.rg ''
+
 terraform init
 
 terraform import azurerm_resource_group.rg '...'

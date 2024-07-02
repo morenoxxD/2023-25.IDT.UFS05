@@ -22,7 +22,7 @@ variable "AZURE_APP_SERVICE_REPO_URL" {
 
 variable "AZURE_REGION" {
   type    = string
-  default = "eastus"
+  default = "westus"
 }
 
 # Generate a random integer to create a globally unique name
@@ -34,7 +34,7 @@ resource "random_integer" "ri" {
 # Create the resource group
 resource "azurerm_resource_group" "rg" {
   name     = var.AZURE_RESOURCE_GROUP
-  location = "westus"
+  location = var.AZURE_REGION
 }
 
 # Create the Linux App Service Plan
